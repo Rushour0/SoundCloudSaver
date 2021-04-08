@@ -11,7 +11,7 @@ layout = [[sg.Text("Enter song name and artist")],
           [sg.Text(size = (40,1),key = 'out',text_color = "#CC55AA")],
           [sg.Button('  quit  ')]]
 api = SoundcloudAPI()
-def download(resultstr):
+def download(resultstr,window):
     track = api.resolve(f"{resultstr}")
 
     if type(track) is not Track:
@@ -55,7 +55,7 @@ def loop():
             if len(searched)!=rescount-1:
                 rescount+=1
             
-            download(searched[rescount])
+            download(searched[rescount],window)
         if event == sg.WINDOW_CLOSED or event == '  quit  ':
             res = sg.popup_yes_no("Do you want to quit?")
             if res.lower() == "yes":
