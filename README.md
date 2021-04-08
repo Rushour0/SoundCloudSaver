@@ -7,8 +7,7 @@ A simple application to download songs from sound cloud based on artist name and
 ***Other users install***
 *googlesearch
 PySimpleGUI
-soundcloud-lib
-*
+soundcloud-lib*
 
 
 *Or use the **SoundCloudSaver.exe** file to run the same*
